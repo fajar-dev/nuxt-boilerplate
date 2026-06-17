@@ -36,7 +36,7 @@
             color="error"
             variant="ghost"
             icon="i-lucide-log-out"
-            class="w-full justify-start text-sm px-3 text-red-400 hover:bg-red-50 cursor-pointer"
+            class="w-full"
             @click="handleLogout"
           >
             Logout

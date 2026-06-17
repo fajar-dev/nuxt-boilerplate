@@ -25,7 +25,7 @@
 
       <div class="space-y-3">
         <UButton
-          size="lg"
+          
           block
           color="primary"
           @click="isSubmitted = false"
@@ -51,7 +51,7 @@
           v-model="state.email"
           type="email"
           placeholder="Enter your email"
-          size="lg"
+          
           class="w-full"
         />
       </UFormField>
@@ -59,7 +59,7 @@
       <div class="flex flex-col gap-3 pt-2">
         <UButton
           type="submit"
-          size="lg"
+          
           block
           color="primary"
           :loading="loading"

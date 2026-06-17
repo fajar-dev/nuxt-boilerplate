@@ -30,16 +30,14 @@ export const useNavigation = () => {
           icon: 'i-lucide-users-round'
         }
       ]
-    },
+    }
+  ]
+
+  const bottomNavItems: NavItem[] = [
     {
-      title: 'Settings',
-      items: [
-        {
-          label: 'Website Setting',
-          to: '/settings/website',
-          icon: 'i-lucide-settings'
-        },
-      ]
+      label: 'Feedback',
+      to: '/feedback',
+      icon: 'i-lucide-message-square-warning'
     }
   ]
 
@@ -53,6 +51,7 @@ export const useNavigation = () => {
   return {
     isCollapsed,
     navGroups,
+    bottomNavItems,
     isItemActive
   }
 }

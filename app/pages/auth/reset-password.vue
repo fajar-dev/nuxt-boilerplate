@@ -21,7 +21,7 @@
           variant="subtle"
         />
         <UButton
-          size="lg"
+          
           block
           color="primary"
           to="/auth/sign-in"
@@ -52,7 +52,7 @@
             v-model="state.password"
             :type="showPassword ? 'text' : 'password'"
             placeholder="Enter new password"
-            size="lg"
+            
             class="w-full"
           >
             <template #trailing>
@@ -74,7 +74,7 @@
             v-model="state.confirmPassword"
             :type="showConfirmPassword ? 'text' : 'password'"
             placeholder="Confirm new password"
-            size="lg"
+            
             class="w-full"
           >
             <template #trailing>
@@ -93,7 +93,7 @@
         <div class="flex flex-col gap-3 pt-2">
           <UButton
             type="submit"
-            size="lg"
+            
             block
             color="primary"
             :loading="loading"

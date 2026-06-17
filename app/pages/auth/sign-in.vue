@@ -24,7 +24,7 @@
           v-model="state.email"
           type="email"
           placeholder="Enter your email"
-          size="lg"
+          
           class="w-full"
         />
       </UFormField>
@@ -44,7 +44,7 @@
           v-model="state.password"
           :type="showPassword ? 'text' : 'password'"
           placeholder="Enter your password"
-          size="lg"
+          
           class="w-full"
         >
           <template #trailing>
@@ -65,7 +65,7 @@
         <!-- Submit Login Button -->
         <UButton
           type="submit"
-          size="lg"
+          
           block
           color="primary"
           :loading="loading || googleLoading"
@@ -79,7 +79,7 @@
         <!-- Sign In with Google Button -->
         <UButton
           type="button"
-          size="lg"
+          
           block
           variant="soft"
           color="neutral"

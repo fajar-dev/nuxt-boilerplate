@@ -8,10 +8,10 @@ export class ContactService {
         return { headers: { Authorization: `Bearer ${useAuth().state.token}` } }
     }
 
-    async getAll(page = 1, perPage = 10): Promise<ApiResponse<Contact[]>> {
+    async getAll(page = 1, perPage = 10, q = ''): Promise<ApiResponse<Contact[]>> {
         try {
             const response = await apiService.client.get<ApiResponse<Contact[]>>(
-                `/contacts?page=${page}&perPage=${perPage}`,
+                `/contact?page=${page}&perPage=${perPage}&q=${q}`,
                 this.authHeaders
             )
             return response.data
@@ -23,7 +23,7 @@ export class ContactService {
     async getById(id: number): Promise<ApiResponse<Contact>> {
         try {
             const response = await apiService.client.get<ApiResponse<Contact>>(
-                `/contacts/${id}`,
+                `/contact/${id}`,
                 this.authHeaders
             )
             return response.data
@@ -35,7 +35,7 @@ export class ContactService {
     async create(payload: ContactPayload): Promise<ApiResponse<Contact>> {
         try {
             const response = await apiService.client.post<ApiResponse<Contact>>(
-                `/contacts`,
+                `/contact`,
                 payload,
                 this.authHeaders
             )
@@ -48,7 +48,7 @@ export class ContactService {
     async update(id: number, payload: ContactPayload): Promise<ApiResponse<Contact>> {
         try {
             const response = await apiService.client.put<ApiResponse<Contact>>(
-                `/contacts/${id}`,
+                `/contact/${id}`,
                 payload,
                 this.authHeaders
             )
@@ -61,7 +61,7 @@ export class ContactService {
     async delete(id: number): Promise<ApiResponse<null>> {
         try {
             const response = await apiService.client.delete<ApiResponse<null>>(
-                `/contacts/${id}`,
+                `/contact/${id}`,
                 this.authHeaders
             )
             return response.data
