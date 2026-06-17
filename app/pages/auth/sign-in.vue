@@ -6,7 +6,7 @@
       <BrandLogo />
       <div class="space-y-1">
         <h1 class="text-3xl font-bold text-neutral-900 ">
-          Hello World
+          Sign In
         </h1>
         <p class="text-neutral-600">
           Please enter your credentials to sign in
@@ -32,13 +32,12 @@
       <!-- Password Input Container -->
       <UFormField label="Password" name="password" class="w-full" :ui="{ label: 'text-sm font-medium text-neutral-800' }">
         <template #hint>
-          <a
-            href="https://isx.nusa.net.id/forget_pw.php"
-            target="_blank"
-            class="text-xs font-medium text-neutral-900 hover:text-primary transition-colors"
+          <NuxtLink
+            to="/auth/forgot-password"
+            class="text-sm font-medium text-primary"
           >
             Forgot password?
-          </a>
+          </NuxtLink>
         </template>
         <UInput
           id="password"
@@ -114,7 +113,7 @@ definePageMeta({
 
 // SEO meta configurations for auth flow
 useHead({
-  title: 'Sign In - VP Access Business Dashboard'
+  title: 'Sign In'
 })
 
 // Form state using reactive model representation

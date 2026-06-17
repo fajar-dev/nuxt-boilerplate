@@ -1,7 +1,7 @@
 import axios from "axios"
 import { apiService } from "./api-service"
 import { handleServiceError } from "../composables/error-helper"
-import type { AuthResponse, User } from "../types/auth"
+import type { ApiResponse, AuthResponse, User } from "../types/auth"
 
 export class AuthService {
     private readonly ACCESS_TOKEN_KEY = 'accessToken'
@@ -86,6 +86,33 @@ export class AuthService {
         try {
             const response = await apiService.client.post<AuthResponse>('/auth/google', { code })
             this.setSession(response.data)
+            return response.data
+        } catch (error: any) {
+            return handleServiceError(error)
+        }
+    }
+
+    async forgotPassword(email: string): Promise<ApiResponse<null>> {
+        try {
+            const response = await apiService.client.post<ApiResponse<null>>('/auth/forgot-password', { email })
+            return response.data
+        } catch (error: any) {
+            return handleServiceError(error)
+        }
+    }
+
+    async validateResetPassword(email: string, token: string): Promise<ApiResponse<null>> {
+        try {
+            const response = await apiService.client.get<ApiResponse<null>>('/auth/validate-reset-token?email=' + email + '&token=' + token)
+            return response.data
+        } catch (error: any) {
+            return handleServiceError(error)
+        }
+    }
+
+    async resetPassword(token: string, newPassword: string): Promise<ApiResponse<null>> {
+        try {
+            const response = await apiService.client.post<ApiResponse<null>>('/auth/reset-password', { token, newPassword })
             return response.data
         } catch (error: any) {
             return handleServiceError(error)
