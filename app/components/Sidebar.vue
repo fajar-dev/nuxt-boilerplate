@@ -27,7 +27,7 @@
 
       <!-- Navigation Menus -->
       <nav class="space-y-4">
-        <div v-for="group in navGroups" :key="group.title" class="space-y-1.5">
+        <div v-for="group in navGroups" :key="group.title" class="space-y-1">
           <!-- Group Title -->
           <h3
             v-if="!isCollapsed"
@@ -49,7 +49,7 @@
                   :to="item.to"
                   class="flex items-center transition-colors group"
                   :class="[
-                    isCollapsed ? 'w-10 h-10 mx-auto justify-center rounded-md' : 'w-full gap-3 px-3 py-2.5 text-sm rounded-md font-medium',
+                    isCollapsed ? 'w-10 h-10 mx-auto justify-center rounded-md' : 'w-full gap-3 px-3 py-2 text-sm rounded-md font-medium',
                     isItemActive(item)
                       ? 'bg-primary text-white'
                       : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'
@@ -87,7 +87,7 @@
               :to="item.to"
               class="flex items-center transition-colors group"
               :class="[
-                isCollapsed ? 'w-10 h-10 mx-auto justify-center rounded-md' : 'w-full gap-3 px-3 py-2.5 text-sm rounded-md font-medium',
+                isCollapsed ? 'w-10 h-10 mx-auto justify-center rounded-md' : 'w-full gap-3 px-3 py-2 text-sm rounded-md font-medium',
                 isItemActive(item)
                   ? 'bg-primary text-white'
                   : 'text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900'

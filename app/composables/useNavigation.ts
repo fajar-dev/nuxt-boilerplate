@@ -28,6 +28,11 @@ export const useNavigation = () => {
           label: 'Contact',
           to: '/contact',
           icon: 'i-lucide-users-round'
+        },
+        {
+          label: 'Users',
+          to: '/user',
+          icon: 'i-lucide-user'
         }
       ]
     }

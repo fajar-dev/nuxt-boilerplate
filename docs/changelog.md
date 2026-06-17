@@ -6,6 +6,16 @@ Format: [Semantic Versioning](https://semver.org/) — `MAJOR.MINOR.PATCH`
 
 ---
 
+## [1.1.0] — 2026-06-17
+
+### Added
+- **User Management Page** (`/user`) — A brand new CRUD page displaying users using `<UTable>`, filtering by active status, and paginated searches.
+- **MinIO Avatar Image Upload** — Real-time user photo uploads utilizing a custom profile avatar selector in both Add and Edit modals, integrating with the new `/api/upload` endpoint.
+- **User Service and Types** — Structured type interfaces in `user.d.ts` and Axios API methods in `user-service.ts`.
+- **Sidebar Nav Link** — Registered the "Users" link inside sidebar navigation.
+
+---
+
 ## [1.0.0] — 2026-06-17
 
 ### 🎉 Initial Release
