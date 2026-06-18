@@ -37,7 +37,7 @@
           </h3>
 
           <!-- Group Items -->
-          <div class="space-y-2">
+          <div class="space-y-1">
             <template v-for="item in group.items" :key="item.label">
               <!-- Reusable NavLink with conditional tooltip wrapping -->
               <UTooltip

@@ -2,7 +2,7 @@
   <!-- Tab Content: Information -->
   <div class="p-6 space-y-6">
     <!-- Photo Upload Section -->
-    <div class="flex flex-col sm:flex-row items-center gap-6 pb-4 border-b border-neutral-150">
+    <div class="flex flex-col sm:flex-row items-center gap-6 pb-4 border-b border-neutral-100">
       <div class="relative group cursor-pointer" @click="triggerFileInput">
         <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-neutral-200 hover:border-primary/50 transition-colors duration-200 flex items-center justify-center bg-neutral-50 relative">
           <img v-if="previewUrl" :src="previewUrl" class="w-full h-full object-cover" />
